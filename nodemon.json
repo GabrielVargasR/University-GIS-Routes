@@ -1,0 +1,10 @@
+{
+    "ignore": [".git", "node_modules", "frontend"],
+    "watch": ["./"],
+    "exec": "npm start",
+    "ext": "ts",
+    "env": {
+        "MONGO_DB_NAME": "dn_name",
+        "MONGO_HOST": "host:port"
+    }
+}
