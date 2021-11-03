@@ -5,7 +5,7 @@ Second project for GIS class. This web app provides efficient routing for costar
 ## Running the app
 Prerequisites:
 * NodeJS
-* Mongodb server running
+* postgresql server running
 
 ### Commands
 * Running the backend with nodemon:
