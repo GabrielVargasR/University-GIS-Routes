@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./MapComponent.css";
 import { L } from 'leaflet';
-import { MapContainer, TileLayer, useMapEvents } from "react-leaflet";
+import { MapContainer, TileLayer, useMapEvents, Marker } from "react-leaflet";
 
 const ClickHandler = () => {
     const [position, setPosition] = useState(null)
