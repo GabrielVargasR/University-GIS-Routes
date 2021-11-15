@@ -2,7 +2,6 @@ import { useState, useEffect, useCallback } from "react";
 import "./MapComponent.css";
 import GeoServerController from "../controllers/GeoServerController";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
-import ClickHandler from "../handlers/ClickHandler";
 import Stop from "./Stop";
 
 const MapComponent = () => {
@@ -85,8 +84,6 @@ const MapComponent = () => {
             {roads && <GeoJSON data={roads.features}/>}
             {stops && stops.features.map((stop) => {return (<Stop obj={stop} clickHandler={stopHandler} key={stop.properties.id}/>)})}
             {route && <GeoJSON data={route.features} onEachFeature={onRouteSegment} style={{color:'red'}}/> }
-
-            <ClickHandler/>
         </MapContainer>
     );
 };
