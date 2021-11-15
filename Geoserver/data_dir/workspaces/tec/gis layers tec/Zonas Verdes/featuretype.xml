@@ -1,0 +1,64 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-9ca5bbd:17c373127a7:-7ffc</id>
+  <name>Zonas Verdes</name>
+  <nativeName>zonas_verdes</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-9ca5bbd:17c373127a7:-7ffe</id>
+  </namespace>
+  <title>Zonas Verdes</title>
+  <abstract>Zonas verdes del TEC San Carlos</abstract>
+  <keywords>
+    <string>features</string>
+    <string>zonas_verdes</string>
+  </keywords>
+  <nativeCRS class="projected">PROJCS[&quot;CR05 / CRTM05&quot;, 
+  GEOGCS[&quot;CR05&quot;, 
+    DATUM[&quot;Costa Rica 2005&quot;, 
+      SPHEROID[&quot;WGS 84&quot;, 6378137.0, 298.257223563, AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]], 
+      TOWGS84[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+      AUTHORITY[&quot;EPSG&quot;,&quot;1065&quot;]], 
+    PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], 
+    UNIT[&quot;degree&quot;, 0.017453292519943295], 
+    AXIS[&quot;Geodetic longitude&quot;, EAST], 
+    AXIS[&quot;Geodetic latitude&quot;, NORTH], 
+    AUTHORITY[&quot;EPSG&quot;,&quot;5365&quot;]], 
+  PROJECTION[&quot;Transverse_Mercator&quot;, AUTHORITY[&quot;EPSG&quot;,&quot;9807&quot;]], 
+  PARAMETER[&quot;central_meridian&quot;, -84.0], 
+  PARAMETER[&quot;latitude_of_origin&quot;, 0.0], 
+  PARAMETER[&quot;scale_factor&quot;, 0.9999], 
+  PARAMETER[&quot;false_easting&quot;, 500000.0], 
+  PARAMETER[&quot;false_northing&quot;, 0.0], 
+  UNIT[&quot;m&quot;, 1.0], 
+  AXIS[&quot;Easting&quot;, EAST], 
+  AXIS[&quot;Northing&quot;, NORTH], 
+  AUTHORITY[&quot;EPSG&quot;,&quot;5367&quot;]]</nativeCRS>
+  <srs>EPSG:5367</srs>
+  <nativeBoundingBox>
+    <minx>443980.28125</minx>
+    <maxx>444330.3125</maxx>
+    <miny>1145620.625</miny>
+    <maxy>1146020.75</maxy>
+    <crs class="projected">EPSG:5367</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-84.51156923312347</minx>
+    <maxx>-84.50836702161557</maxx>
+    <miny>10.360146060420057</miny>
+    <maxy>10.363768777502129</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-9ca5bbd:17c373127a7:-7ffd</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>
