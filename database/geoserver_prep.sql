@@ -1,10 +1,10 @@
 create view stops as
 	select id, st_transform(the_geom, 4326) as geom
-	from paradas
+	from paradas;
 
 create view roads as
 	select id, st_transform(geom, 4326) as geom
-	from lines2
+	from lines2;
 
 --Función que recibe el numero de parada inicial y final de la ruta y devuelve las geometrias de la ruta mas corta.
 --Devuelve distintas geometrias que conectan las paradas por las que debe pasar.
