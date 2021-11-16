@@ -3,6 +3,7 @@ import "./MapComponent.css";
 import GeoServerController from "../controllers/GeoServerController";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import Stop from "./Stop";
+import Route from "./Route";
 
 const MapComponent = () => {
     // estados para manejar las capas de carreteras y paradas
@@ -81,9 +82,9 @@ const MapComponent = () => {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             {/* se cargan las carreteras y las paradas una vez que se obtienen del backend */}
-            {roads && <GeoJSON data={roads.features}/>}
+            {roads && <GeoJSON data={roads.features} style={{color:'black'}}/>}
             {stops && stops.features.map((stop) => {return (<Stop obj={stop} clickHandler={stopHandler} key={stop.properties.id}/>)})}
-            {route && <GeoJSON data={route.features} onEachFeature={onRouteSegment} style={{color:'green'}}/> }
+            {route && route.features.map((sub_route) => {return <Route obj={sub_route}/>})}
         </MapContainer>
     );
 };
