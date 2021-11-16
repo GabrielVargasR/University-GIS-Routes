@@ -4,20 +4,19 @@ Second project for GIS class. This web app provides efficient routing for costar
 ---
 ## Running the app
 Prerequisites:
-* NodeJS
+* Install dependencies (`npm install`)
 * postgresql server running
+    * build db using database/respaldo
+    * run database/geoserver_prep.sql script
 
 ### Commands
-* Running the backend with nodemon:
+* Running the backend
+    
+    `cd Geoserver/bin`
 
-    `npm run start:dev`
-* Running the backend for production:
-
-    `npm start`
+    `./startup.sh`
 * Running the frontend:
 
-    `cd frontend`
-    
     `npm start`
 
 Make sure that the backend is running before starting the frontend.

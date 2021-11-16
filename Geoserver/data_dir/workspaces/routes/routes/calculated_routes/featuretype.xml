@@ -1,0 +1,66 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--6fbefd7d:17d2618c1f2:-7ebe</id>
+  <name>calculated_routes</name>
+  <nativeName>calculated_routes</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-46d186a6:17cffd18499:-7ffe</id>
+  </namespace>
+  <title>calculated_routes</title>
+  <keywords>
+    <string>features</string>
+    <string>calculated_routes</string>
+  </keywords>
+  <srs>EPSG:4326</srs>
+  <nativeBoundingBox>
+    <minx>-84.42965959271301</minx>
+    <maxx>-84.42589963237266</maxx>
+    <miny>10.323612608271713</miny>
+    <maxy>10.324851910115568</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-84.42965959271301</minx>
+    <maxx>-84.42589963237266</maxx>
+    <miny>10.323612608271713</miny>
+    <maxy>10.324851910115568</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="JDBC_VIRTUAL_TABLE">
+      <virtualTable>
+        <name>calculated_routes</name>
+        <sql>select * from fn_rutas(%source%, %target%)
+</sql>
+        <escapeSql>false</escapeSql>
+        <geometry>
+          <name>geom</name>
+          <type>Geometry</type>
+          <srid>-1</srid>
+        </geometry>
+        <parameter>
+          <name>source</name>
+          <defaultValue>1</defaultValue>
+          <regexpValidator>^[\d]+$</regexpValidator>
+        </parameter>
+        <parameter>
+          <name>target</name>
+          <defaultValue>2</defaultValue>
+          <regexpValidator>^[\d]+$</regexpValidator>
+        </parameter>
+      </virtualTable>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-46d186a6:17cffd18499:-7ff7</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>
