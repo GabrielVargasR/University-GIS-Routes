@@ -1,0 +1,36 @@
+<settings>
+  <id>SettingsInfoImpl-46d186a6:17cffd18499:-7ff8</id>
+  <workspace>
+    <id>WorkspaceInfoImpl-46d186a6:17cffd18499:-7fff</id>
+    <name>routes</name>
+    <isolated>false</isolated>
+    <dateCreated>2021-11-08 13:52:23.517 UTC</dateCreated>
+    <dateModified>2021-11-08 14:47:09.984 UTC</dateModified>
+  </workspace>
+  <contact>
+    <id>contact</id>
+    <addressCity>Alexandria</addressCity>
+    <addressCountry>Egypt</addressCountry>
+    <addressType>Work</addressType>
+    <contactEmail>claudius.ptolomaeus@gmail.com</contactEmail>
+    <contactOrganization>The Ancient Geographers</contactOrganization>
+    <contactPerson>Claudius Ptolomaeus</contactPerson>
+    <contactPosition>Chief Geographer</contactPosition>
+  </contact>
+  <charset>UTF-8</charset>
+  <numDecimals>8</numDecimals>
+  <onlineResource>http://geoserver.org</onlineResource>
+  <verbose>false</verbose>
+  <verboseExceptions>false</verboseExceptions>
+  <metadata>
+    <map>
+      <entry>
+        <string>quietOnNotFound</string>
+        <boolean>false</boolean>
+      </entry>
+    </map>
+  </metadata>
+  <localWorkspaceIncludesPrefix>false</localWorkspaceIncludesPrefix>
+  <showCreatedTimeColumnsInAdminList>false</showCreatedTimeColumnsInAdminList>
+  <showModifiedTimeColumnsInAdminList>false</showModifiedTimeColumnsInAdminList>
+</settings>
