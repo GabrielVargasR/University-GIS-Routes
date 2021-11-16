@@ -56,7 +56,7 @@ const MapComponent = () => {
         else {
             console.log(source, stop_id);
             const geoServerController = new GeoServerController();
-            geoServerController.getRoute(source, stop_id)
+            geoServerController.getRoutes(source, stop_id)
             .then((geoJSON)=>{
                 console.log(geoJSON);
                 setRoute(geoJSON);
@@ -83,7 +83,7 @@ const MapComponent = () => {
             {/* se cargan las carreteras y las paradas una vez que se obtienen del backend */}
             {roads && <GeoJSON data={roads.features}/>}
             {stops && stops.features.map((stop) => {return (<Stop obj={stop} clickHandler={stopHandler} key={stop.properties.id}/>)})}
-            {route && <GeoJSON data={route.features} onEachFeature={onRouteSegment} style={{color:'red'}}/> }
+            {route && <GeoJSON data={route.features} onEachFeature={onRouteSegment} style={{color:'green'}}/> }
         </MapContainer>
     );
 };
