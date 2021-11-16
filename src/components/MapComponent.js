@@ -3,8 +3,9 @@ import "./MapComponent.css";
 import GeoServerController from "../controllers/GeoServerController";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import Stop from "./Stop";
+import Route from "./Route";
 
-const MapComponent = () => {
+const MapComponent = (props) => {
     // estados para manejar las capas de carreteras y paradas
     const [roads, setRoads] = useState(null);
     const [stops, setStops] = useState(null);
@@ -54,24 +55,21 @@ const MapComponent = () => {
             setSource(stop_id);
         }
         else {
-            console.log(source, stop_id);
             const geoServerController = new GeoServerController();
-            geoServerController.getRoute(source, stop_id)
+            geoServerController.getRoutes(source, stop_id)
             .then((geoJSON)=>{
-                console.log(geoJSON);
+                let routeInfo = "Ruta:\n";
                 setRoute(geoJSON);
                 setSource(-1);
+                geoJSON.features.forEach((seg) => {routeInfo += `${seg.properties.nombre}: ${seg.properties.distance_km}km\n`});
+                props.routeInfo(routeInfo);
+                props.popup(true);
             })
             .catch(()=>{
                 setSource(-1);
             });
         }
     };
-
-    const onRouteSegment = (segment, layer) => {
-        console.log(segment);
-    }
-
 
     return (
         <MapContainer center={[10.193297204997892, -84.37774658203125]} zoom={10}>
@@ -81,9 +79,9 @@ const MapComponent = () => {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             {/* se cargan las carreteras y las paradas una vez que se obtienen del backend */}
-            {roads && <GeoJSON data={roads.features}/>}
+            {roads && <GeoJSON data={roads.features} style={{color:'black'}}/>}
             {stops && stops.features.map((stop) => {return (<Stop obj={stop} clickHandler={stopHandler} key={stop.properties.id}/>)})}
-            {route && <GeoJSON data={route.features} onEachFeature={onRouteSegment} style={{color:'red'}}/> }
+            {route && route.features.map((sub_route) => {return <Route obj={sub_route} key={sub_route.properties.nombre}/>})}
         </MapContainer>
     );
 };

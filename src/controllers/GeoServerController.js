@@ -51,6 +51,20 @@ class GeoServerController {
             })
             .catch (e=>console.log(e))
     }
+
+    getRoutes = (source, target) => {
+        // agrega al config el nombre de la capa y los id de las paradas
+        const qConfig = {...this.config, params: {
+            ...this.config.params, 
+            typeNames: 'routes:calculated_routes',
+            viewParams: `source:${source};target:${target}`
+        }}
+        return axios(qConfig)
+            .then(res=>{
+                return res.data;
+            })
+            .catch (e=>console.log(e))
+    }
 }
 
 
