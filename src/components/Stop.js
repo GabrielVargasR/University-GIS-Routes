@@ -1,5 +1,4 @@
-import { Marker } from "react-leaflet";
-// import Marker from 'react-leaflet-enhanced-marker';
+import { Marker, Tooltip } from "react-leaflet";
 
 const Stop = (props) => {
     // prepara las coordenadas a como las espera Marker
@@ -14,7 +13,10 @@ const Stop = (props) => {
     };
 
     return (
-        <Marker position={coordinates} eventHandlers={markerHandler}/>
+        <Marker position={coordinates} eventHandlers={markerHandler}>
+            {/* Tooltip con el id de parada */}
+            <Tooltip>{`Parada: ${props.obj.properties.id}`}</Tooltip>
+        </Marker>
     )
 }
 
